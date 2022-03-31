@@ -1,0 +1,137 @@
+/* style */
+.root{
+  width: 100vw;
+  height: 100vh;
+}
+.container{
+  width: inherit;
+  height: inherit;
+}
+.container>div:nth-child(1){
+  width: inherit;
+  height: 10vh;
+}
+
+/* 3item container */
+.container>div:nth-child(2){
+  width: inherit;
+  height: 90vh;
+}
+
+
+/* header */
+.container>div:nth-child(2)>div:nth-child(1){
+  display: flex;
+}
+.container>div:nth-child(2)>div:nth-child(1)>div:nth-child(1){
+  width: 90%;
+  height: 50vh;
+  background-color: var(--color-fff);
+  border-radius: 0px 100px 100px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  /* !box-shadow 속성을 더 알아보자
+  https://developer.mozilla.org/ko/docs/Web/CSS/box-shadow */
+  box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.container>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>ul{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 2vw;
+}
+.container>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>ul li{
+  list-style-type: none;
+  color: var(--color-d6);
+}
+.container>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>ul li:nth-child(1){
+  color: var(--color-bk);
+  font-weight: 700;
+}
+.container>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div{
+  width: 50%;
+}
+.container>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div div:nth-child(1){
+  font-size: 1.5em;
+}
+.container>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(3){
+  /* !순서 선택자 틀리는 실수 그만 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+/* scroll */
+.container>div:nth-child(2)>div:nth-child(1)>div:nth-child(2){
+  width: 10%;
+  height: 90vh;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  right: 0;
+}
+.container>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>div{
+  width: 100%;
+  height: 80%;
+  background-color: var(--color-d6);
+  border-radius: 100px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>div>div{
+  width: 30%;
+  height: 80%;
+  background-color: var(--color-fff);
+  border-radius: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.container>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>div>div>div{
+  width: 80%;
+  height: 10%;
+  background-color: var(--color-gray);
+  border-radius: 100px;
+  position: relative;
+  top: 2vw;
+}
+
+
+/* main */
+.container>div:nth-child(2)>div:nth-child(2){
+  width: 90%;
+  height: 45vh;
+  background-color: var(--color-d6);
+  /* !빈 공간에 포지션 값을 주어 3개의 아이템이 한 컨테이너에 들어갈 수 있게 할 수 있었다 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  
+}
+.container>div:nth-child(2)>div:nth-child(2)>div{
+  width: inherit;
+  height: 30vh;
+  /* !이 부분에서 3개의 아이템 가로로 배치하기 */
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 15vh;
+}
+.container>div:nth-child(2)>div:nth-child(2)>div>div{
+  width: 20vw;
+}
+.container>div:nth-child(2)>div:nth-child(2)>div>div>div:nth-child(1){
+  display: flex;
+  justify-content: space-between;
+}
+.container>div:nth-child(2)>div:nth-child(2)>div>div>div:nth-child(1)>div:nth-child(1){
+  font-size: 1.5em;
+}
